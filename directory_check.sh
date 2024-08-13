@@ -5,14 +5,20 @@
 
 #Check for a directory named backup in the current directory
 
-#Checks each directory in the vm
+
 for directory in *
-#checks if the directory is named backup
+#Checks each directory in the vm
 until [[ $directory == "backup" ]]
+#Checks if the directory is named backup
 do
 	echo "This $directory is not named backup"
-then
-	mkdir backup
-else
-	echo "A directory named "backup" exists!"
+	#States the directory does not exist
+	if [[ $directory == "backup" ]]
+	#When the directory is named backup
+	then
+		echo "A directory named "backup" exists!"
+		#It found the directory named backup
+	else
+		mkdir backup
+		#Create the backup folder
 done
