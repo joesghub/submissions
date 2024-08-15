@@ -24,8 +24,10 @@
 #Designating the file to search
 web_logs="/home/ubuntu/bash_prac/web-server-access-logs.log"
 
-if [ -f "$web_logs" ]; then
-    grep "error_expected" "$web_logs" | awk -F'[" ]+' '{print $2}' | sort | uniq -c | sort -b -n > web_logs_errors.txt
+if [ -f "$web_logs" ]
+then
+	grep "error_expected" "$web_logs" | awk -F'[" ]+' '{print $2}' | sort | uniq -c | sort -b -n > web_logs_errors.txt
+	echo "The file $web_logs exists and a log has been created!"
 fi
 
 
