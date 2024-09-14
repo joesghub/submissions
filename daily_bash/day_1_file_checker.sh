@@ -25,6 +25,7 @@ echo $'\n'"Currently checking if "${check_file}" exists..."
 # 2>&1 tells the shell to send error messages (2 refers to stderr) to the same location as standard output (1 refers to stdout). 
 # Since stdout is already being sent to /dev/null, this means both normal output and error messages will be discarded
 
+### Previous iterations
 # if find / -name "${check_file}" > /dev/null 2>&1
 # find / -iname ""${check_file}"" -print -quit 2>/dev/null
 # if [ -e "${check_file}" ] > /dev/null 2>&1
