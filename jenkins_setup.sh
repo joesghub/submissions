@@ -8,7 +8,7 @@ sudo add-apt-repository -y ppa:deadsnakes/ppa
 sudo apt update
 
 # Install Python 3.9, Python 3.9 venv, pip, and nginx
-sudo apt install -y python3.9 python3.9-venv python3-pip nginx
+sudo apt install -y python3.9 python3.9-venv python3-pip #nginx
 
 # Download Jenkins key and add Jenkins repository
 sudo wget -O /usr/share/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
@@ -19,7 +19,7 @@ sudo apt-get update
 sudo apt-get install -y jenkins
 
 # Upgrade all packages
-sudo apt-get upgrade -y
+#sudo apt-get upgrade -y
 
 # Start Jenkins and check its status
 sudo systemctl start jenkins
