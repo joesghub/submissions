@@ -20,5 +20,7 @@ echo "Installing Jupyter Notebook..."
 pip install jupyter
 
 # Start Jupyter Notebook
-echo "Starting Jupyter Notebook..."
+echo "Starting Jupyter Notebook on Port :8888..."
 jupyter notebook --ip=0.0.0.0 --no-browser
+
+
