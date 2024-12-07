@@ -42,9 +42,12 @@ sudo systemctl start prometheus
 sudo systemctl enable prometheus
 
 # Install Grafana
-# Add Grafana GPG key and repository
-wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
-sudo add-apt-repository "deb https://packages.grafana.com/oss/deb stable main"
+# Download the Grafana GPG key and save it to the recommended location
+wget -q -O /usr/share/keyrings/grafana-archive-keyring.gpg https://packages.grafana.com/gpg.key
+
+# Add the Grafana repository with the GPG key explicitly referenced
+echo "deb [signed-by=/usr/share/keyrings/grafana-archive-keyring.gpg] https://packages.grafana.com/oss/deb stable main" | sudo tee /etc/apt/sources.list.d/grafana.list > /dev/null
+
 
 # Update package list and install Grafana
 sudo apt update -y
