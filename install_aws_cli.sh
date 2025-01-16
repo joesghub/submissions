@@ -14,8 +14,5 @@ unzip awscliv2.zip
 # Step 4: Run the installation script
 sudo ./aws/install
 
-# Step 5: Install cli
-sudo apt  install awscli
-
-# Step 6: Verify the installation by checking the version
+# Step 5: Verify the installation by checking the version
 aws --version
