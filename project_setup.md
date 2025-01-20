@@ -11,6 +11,11 @@ cd <repository-name>
 2. Create a new repository (e.g., `project-name`).
 3. Leave the repository empty (do not initialize with a README, `.gitignore`, or license).
 
+## 2a. Check the current upstream repository for your local Git repository
+```bash
+git remote -v
+```
+
 ## 3. Set the New Remote Origin
 Replace the original repository’s remote URL with your new repository’s URL:
 ```bash
